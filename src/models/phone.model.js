@@ -11,7 +11,6 @@ const phoneSchema= new Schema({
     price:Number,
     cost: Number,
     stock: Number,
-    number: Number,
     status: Number
 },{
     versionKey: false,
