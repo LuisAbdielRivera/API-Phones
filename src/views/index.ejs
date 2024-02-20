@@ -17,21 +17,29 @@
             <h1>Abarrotes TI</h1>
             <div data-role="navbar">
                 <ul>
-                    <li><a href="#" data-icon="home">Inicio</a></li>
-                    <li><a href="#" data-icon="eye" class="ui-btn-active">Productos</a></li>
-                    <li><a href="#" data-icon="user">Empleados</a></li>
+                    <li><a href="/" data-icon="home" class="ui-btn-active">Inicio</a></li>
+                    <li><a href="#" data-icon="phone">Telefonos</a></li>
                 </ul>
             </div>
         </div>
         <div data-role="content">
             <form action="/" method="POST">
                 <input type="text" name="barcode" placeholder="Código de Barras">
-                <input type="text" name="description" placeholder="Descripcion">
                 <input type="text" name="brand" placeholder="Marca">
                 <input type="number" name="price" placeholder="Precio de Compra">
                 <input type="number" name="cost" placeholder="Precio de Venta">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <legend>Tamaño:</legend>
+                        <input type="radio" name="size" id="radio-choice-c" value="chico" checked="checked">
+                        <label for="radio-choice-c">Chico</label>
+                        
+                        <input type="radio" name="size" id="radio-choice-m" value="mediano">
+                        <label for="radio-choice-m">Mediano</label>
+
+                        <input type="radio" name="size" id="radio-choice-g" value="grande">
+                        <label for="radio-choice-g">Grande</label>
+                    </fieldset>
                 <input type="number" name="stock" placeholder="Existencias">
-                <input type="date" name="expiredDate" placeholder="Fecha de Caducidad">
                 
                 <label for="flip-2">Activo</label>
                 <select name="status" id="flip-2" data-role="slider">
@@ -41,9 +49,7 @@
 
                 <input type="submit" value="Submit">
             </form>
-            <form>
-                <input data-type="search" id="searchForCollapsibleSetChildren">
-            </form>
+
                 <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
                     <% products.forEach((product) => { %>
                         <div data-role="collapsible" data-filtertext="<%= product.description %>">

@@ -3,9 +3,9 @@ import phoneDAO from '../dao/phones.dao.js'
 
 export const getAll = (req, res) => {
     phoneDAO.getAll()
-    .then(products=>{
-        if(products != null){
-            res.render('../src/views/index', {products})
+    .then(phones=>{
+        if(phones != null){
+            res.render('../src/views/index', {phones})
         }else{
             res.json({ status: "Servidor no disponible" })
         }})
@@ -14,9 +14,9 @@ export const getAll = (req, res) => {
 
 export const getOne = (req, res) => {
     phoneDAO.getOne(req.params.bc)
-    .then(product => {
-        if(product != null)
-            res.render('../src/views/edit', {product})
+    .then(phone => {
+        if(phone != null)
+            res.render('../src/views/edit', {phone})
         else
             res.json({status:"Product not found"})
     })
