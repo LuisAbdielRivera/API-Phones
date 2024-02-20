@@ -25,7 +25,7 @@
         <div data-role="content">
             <form action="/" method="POST">
                 <input type="text" name="barcode" placeholder="Código de Barras">
-                <input type="text" name="brand" placeholder="Marca">
+                <input type="text" name="model" placeholder="Modelo">
                 <input type="number" name="price" placeholder="Precio de Compra">
                 <input type="number" name="cost" placeholder="Precio de Venta">
                 <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
@@ -49,24 +49,6 @@
 
                 <input type="submit" value="Submit">
             </form>
-
-                <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
-                    <% products.forEach((product) => { %>
-                        <div data-role="collapsible" data-filtertext="<%= product.description %>">
-                            <h1><%= product.description %></h1>
-                                <ul data-role="listview" data-inset="false">
-                                    <li>Codigo de Barras: <%= product.barcode %></li>
-                                    <li>Marca: <%= product.brand %></li>
-                                    <li>Precio: <%= product.price %></li>
-                                    <li>Costo: <%= product.cost %></li>
-                                    <li>Existencia: <%= product.stock %></li>
-                                    <li>Fecha de Caducidad: <%= product.expiredDate %></li>
-                                    <li><a href="/<%= product.barcode %>" class="ui-btn">Edit</a></li>
-                                    <li><a href="/delete/<%= product.barcode %>" class="ui-btn">Delete</a></li>
-                                </ul>
-                            </div>
-                    <% }) %>
-                </div>
         </div>
         <div data-role="footer">
             <h5>Developed by Abdiel</h5>
