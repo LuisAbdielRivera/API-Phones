@@ -3,18 +3,23 @@ import Phones from '../models/phone.model.js'
 const phoneDAO = {}
 
 phoneDAO.getAll = async() => {
-    const products = await Phones.find()
-    return products
+    const phones = await Phones.find()
+    return phones
+}
+
+phoneDAO.phoneAll = async() => {
+    const phones = await Phones.find()
+    return phones
 }
 
 phoneDAO.getOne = async(bc) => {
-    const product = await Phones.findOne({barcode:bc})
-    return product
+    const phone = await Phones.findOne({barcode:bc})
+    return phone
 }
 
-phoneDAO.insertPhone = async(product) => {
-    const productSaved = new Phones(product)
-    productSaved.save()
+phoneDAO.insertPhone = async(phone) => {
+    const phoneSaved = new Phones(phone)
+    phoneSaved.save()
     return true
 }
 

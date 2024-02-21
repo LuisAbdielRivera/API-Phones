@@ -47,6 +47,12 @@
     <div data-role="page">
         <div data-role="header">
             <h1>Telcel</h1>
+            <div data-role="navbar" data-iconpos="left">
+                <ul>
+                    <li><a href="/" data-icon="home">Home</a></li>
+                    <li><a href="/products" data-icon="phone" class="ui-btn-active">Phones</a></li>
+                </ul>
+            </div>
         </div>
         <div data-role="content">
             <form action="/" method="POST">
@@ -76,32 +82,6 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
-        <div class="container">
-            <div class="row">
-                <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren"></div>
-              <% phones.forEach((phone) => { %>
-                <div class="col-md-4 mb-3">
-                  <div class="card">
-                    <div class="card-header">
-                        <ul class="list-group list-group-flush">
-                            <h1><%= phone.model %></h1>
-                            <li class="list-group-item">Codigo de Barras: <%= phone.barcode %></li>
-                            <li class="list-group-item">Tamaño: <%= phone.size %></li>
-                            <li class="list-group-item">Modelo: <%= phone.model %></li>
-                            <li class="list-group-item">Costo: <%= phone.cost %></li>
-                            <li class="list-group-item">Existencia: <%= phone.stock %></li>
-                            <li class="list-group-item"><%= (phone.status == 0) ? "No Disponible" : "Disponible" %></li>
-                          </ul>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <a href="/<%= phone.barcode %>" class="ui-btn ui-corner-all" style="background-color: #FFFF00; color: #000;">Editar</a>
-                            <a href="/delete/<%= phone.barcode %>" class="ui-btn ui-corner-all" style="background-color: #FF0000; color: #000;">Eliminar</a>
-                          </div>
-                    </div>
-                  </div>
-                </div>
-              <% }) %>
-            </div>
-          </div>
         <div data-role="footer">
                 <div data-role="navbar">
                     <h4 style="text-align:center;">Developed by Abdiel</h4>

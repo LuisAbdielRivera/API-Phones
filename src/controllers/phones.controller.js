@@ -12,6 +12,17 @@ export const getAll = (req, res) => {
     .catch(err=>console.log(err))
 }
 
+export const phoneAll = (req, res) => {
+    phoneDAO.getAll()
+    .then(phones=>{
+        if(phones != null){
+            res.render('../src/views/phones', {phones})
+        }else{
+            res.json({ status: "Servidor no disponible" })
+        }})
+    .catch(err=>console.log(err))
+}
+
 export const getOne = (req, res) => {
     phoneDAO.getOne(req.params.bc)
     .then(phone => {
@@ -53,4 +64,3 @@ export const deletePhone = (req, res) => {
     })
     .catch(err=>res.json({status: "Server unaviable"}))
 }
-
