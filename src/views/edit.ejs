@@ -57,13 +57,13 @@
                 <input type="number" name="cost" placeholder="Precio de Venta" value="<%= phone.cost %>">
                 <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                     <legend>Tamaño:</legend>
-                        <input type="radio" name="size" id="radio-choice-c" value="Chico" <%= phone.size="Chico"?"selected":"" %> >
+                        <input type="radio" name="size" id="radio-choice-c" value="Chico" <%= phone.size==="Chico"?"checked":"" %> >
                         <label for="radio-choice-c"  >Chico</label>
                         
-                        <input type="radio" name="size" id="radio-choice-m" value="Mediano" <%= phone.size="Mediano"?"selected":"" %> >
+                        <input type="radio" name="size" id="radio-choice-m" value="Mediano" <%= phone.size==="Mediano"?"checked":"" %> >
                         <label for="radio-choice-m"  >Mediano</label>
 
-                        <input type="radio" name="size" id="radio-choice-g" value="Grande" <%= phone.size="Grande"?"selected":"" %> >
+                        <input type="radio" name="size" id="radio-choice-g" value="Grande" <%= phone.size==="Grande"?"checked":"" %> >
                         <label for="radio-choice-g">Grande</label>
                     </fieldset>
 
