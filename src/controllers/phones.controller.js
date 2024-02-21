@@ -13,7 +13,7 @@ export const getAll = (req, res) => {
 }
 
 export const phoneAll = (req, res) => {
-    phoneDAO.getAll()
+    phoneDAO.phoneAll()
     .then(phones=>{
         if(phones != null){
             res.render('../src/views/phones', {phones})

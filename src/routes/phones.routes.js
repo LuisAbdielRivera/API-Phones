@@ -7,6 +7,6 @@ router.get('/:bc', getOne)
 router.post('/', insertPhone)
 router.post('/:bc', updatePhone)
 router.get('/delete/:bc', deletePhone)
-router.get('/products', phoneAll)
+router.get('/phones/products', phoneAll)
 
 export default router;
