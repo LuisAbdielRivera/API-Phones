@@ -90,7 +90,7 @@
                             <li class="list-group-item">Modelo: <%= phone.model %></li>
                             <li class="list-group-item">Costo: <%= phone.cost %></li>
                             <li class="list-group-item">Existencia: <%= phone.stock %></li>
-                            <li class="list-group-item">Disponible: <% = phone.status=0?"selected":"" %></li>
+                            <li class="list-group-item"><%= (phone.status == 0) ? "No Disponible" : "Disponible" %></li>
                           </ul>
                           <div class="d-flex justify-content-between align-items-center">
                             <a href="/<%= phone.barcode %>" class="ui-btn ui-corner-all" style="background-color: #FFFF00; color: #000;">Editar</a>
