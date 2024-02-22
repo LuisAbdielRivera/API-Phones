@@ -8,20 +8,47 @@
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <title>Abarrotes TI</title>
+    <link rel="shortcut icon" href="https://laliteradice.files.wordpress.com/2023/04/imagen-6.png?w=1024" />
+    <title>Telcel</title>
+    <style>
+        body{
+            background-color: #FFF;
+        }
+        input[type="submit"]{
+            background-color: #008000;
+            color: #FFF;
+        }
+        footer {
+            padding-top: 30px;
+            background-color: #292c2f;
+            color: #bbb;
+        }
+        img{
+            width: 20%;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            border-radius: 8px;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .delete, .edit{
+            outline: none;
+            text-decoration: none;
+            padding: 2px 1px 0;
+        }
+    </style>
 </head>
 
 <body>
-    <div data-role="page" data-theme="b">
+    <div data-role="page">
         <div data-role="header">
-            <h1>Abarrotes TI</h1>
-            <div data-role="navbar">
-                <ul>
-                    <li><a href="#" data-icon="home">Inicio</a></li>
-                    <li><a href="#" data-icon="eye" class="ui-btn-active">Productos</a></li>
-                    <li><a href="#" data-icon="user">Empleados</a></li>
-                </ul>
-            </div>
+            <a href="#demo-intro" data-rel="back" data-icon="carat-l" data-iconpos="notext">Back</a>
+            <a href="/<%= phone.barcode %>" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
+            <h1>Telcel</h1>
         </div>
         <div data-role="content">
             <form  action="/<%= phone.barcode %>" method="POST">
@@ -31,13 +58,13 @@
                 <input type="number" name="cost" placeholder="Precio de Venta" value="<%= phone.cost %>">
                 <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                     <legend>Tamaño:</legend>
-                        <input type="radio" name="size" id="radio-choice-c" value="chico">
+                        <input type="radio" name="size" id="radio-choice-c" value="Chico">
                         <label for="radio-choice-c">Chico</label>
                         
-                        <input type="radio" name="size" id="radio-choice-m" value="mediano">
+                        <input type="radio" name="size" id="radio-choice-m" value="Mediano">
                         <label for="radio-choice-m">Mediano</label>
 
-                        <input type="radio" name="size" id="radio-choice-g" value="grande">
+                        <input type="radio" name="size" id="radio-choice-g" value="Grande">
                         <label for="radio-choice-g">Grande</label>
                     </fieldset>
 
@@ -48,9 +75,6 @@
                 </select>
                     <input type="submit" value="Saved">
             </form>
-        </div>
-        <div data-role="footer">
-            <h5>Developed by Abdiel</h5>
         </div>
     </div>
 </body>
