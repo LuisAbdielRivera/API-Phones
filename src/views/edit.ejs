@@ -47,7 +47,6 @@
     <div data-role="page">
         <div data-role="header">
             <a href="#demo-intro" data-rel="back" data-icon="carat-l" data-iconpos="notext">Back</a>
-            <a href="/<%= phone.barcode %>" onclick="window.location.reload()" data-icon="back" data-iconpos="notext">Refresh</a>
             <h1>Telcel</h1>
         </div>
         <div data-role="content">
@@ -58,13 +57,13 @@
                 <input type="number" name="cost" placeholder="Precio de Venta" value="<%= phone.cost %>">
                 <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
                     <legend>Tamaño:</legend>
-                        <input type="radio" name="size" id="radio-choice-c" value="Chico">
+                        <input type="radio" name="size" id="radio-choice-c" value="Chico" >
                         <label for="radio-choice-c">Chico</label>
                         
-                        <input type="radio" name="size" id="radio-choice-m" value="Mediano">
+                        <input type="radio" name="size" id="radio-choice-m" value="Mediano" >
                         <label for="radio-choice-m">Mediano</label>
 
-                        <input type="radio" name="size" id="radio-choice-g" value="Grande">
+                        <input type="radio" name="size" id="radio-choice-g" value="Grande" >
                         <label for="radio-choice-g">Grande</label>
                     </fieldset>
 
