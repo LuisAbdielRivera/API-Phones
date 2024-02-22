@@ -18,4 +18,4 @@ const phoneSchema= new Schema({
     timestamps: true
 })
 
-export default model('phone', phoneSchema)
+export default model('phones', phoneSchema)
